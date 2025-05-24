@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Harmonic Motion Simulator - PhysiXLab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Harmonic Motion</h1>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="mass">Mass (kg)</label>
+                <input type="number" id="mass" value="1" min="0.1" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="spring-constant">Spring Constant (N/m)</label>
+                <input type="number" id="spring-constant" value="10" min="1" step="1">
+            </div>
+            <div class="input-group">
+                <label for="initial-displacement">Initial Displacement (m)</label>
+                <input type="number" id="initial-displacement" value="2" min="0" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="damping">Damping Coefficient</label>
+                <input type="number" id="damping" value="0" min="0" step="0.1">
+            </div>
+        </div>
+
+        <button id="run-button">Run Simulation</button>
+        <button id="reset-button">Reset</button>
+
+        <div id="simulation-container">
+            <canvas id="simulation-canvas"></canvas>
+        </div>
+
+        <div id="info-box">
+            <h2>About Simple Harmonic Motion</h2>
+            <ul>
+                <li>Simple Harmonic Motion (SHM) is a type of periodic motion where the restoring force is directly proportional to the displacement.</li>
+                <li>The period of oscillation is given by T = 2π√(m/k), where m is mass and k is spring constant.</li>
+                <li>In the absence of damping, the total energy (kinetic + potential) remains constant.</li>
+                <li>The amplitude of oscillation depends on the initial displacement.</li>
+                <li>Damping causes the amplitude to decrease over time.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

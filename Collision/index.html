@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Collision Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4">
+    <div class="container">
+        <a href="../index.html" class="inline-block mb-4 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-all duration-200 transform hover:scale-105 active:scale-95">← Back</a>
+        <h1>Block Collision Simulator</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="mass1">Mass of Block 1 (kg):</label>
+                <input type="number" id="mass1" value="10" min="1" placeholder="Enter mass of block 1" class="text-right">
+            </div>
+            <div class="input-group">
+                <label for="velocity1">Initial Velocity of Block 1 (m/s):</label>
+                <input type="number" id="velocity1" value="5" placeholder="Enter initial velocity of block 1" class="text-right">
+            </div>
+            <div class="input-group">
+                <label for="mass2">Mass of Block 2 (kg):</label>
+                <input type="number" id="mass2" value="5" min="1" placeholder="Enter mass of block 2" class="text-right">
+            </div>
+            <div class="input-group">
+                <label for="velocity2">Initial Velocity of Block 2 (m/s):</label>
+                <input type="number" id="velocity2" value="-5" placeholder="Enter initial velocity of block 2" class="text-right">
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+            <button id="set-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full max-w-[300px]">Set Values</button>
+            <button id="run-button" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full max-w-[300px]">Run Simulation</button>
+        </div>
+
+        <div id="simulation-container" class="mt-8 p-4 rounded-lg bg-gray-800">
+            <canvas id="simulation-canvas"></canvas>
+        </div>
+        <button id="reset-button" class="mt-4 bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Reset</button>
+
+        <div id="info-box">
+            <h2>How it Works</h2>
+            <ul>
+                <li>Enter the mass and initial velocity for each block.</li>
+                <li>The simulation will display the blocks moving and colliding.</li>
+                <li>The collision is calculated assuming an elastic collision (no energy loss).</li>
+                <li>After the collision, the blocks will move with new velocities based on the conservation of momentum and kinetic energy.</li>
+                <li>Negative velocity indicates movement to the left.</li>
+            </ul>
+            <h2>Physics Concepts</h2>
+            <ul>
+                <li><strong>Momentum:</strong> The product of an object's mass and velocity.  In a closed system, momentum is conserved.</li>
+                 <li><strong>Kinetic Energy:</strong> The energy of motion. In an elastic collision, kinetic energy is conserved.</li>
+                 <li><strong>Elastic Collision:</strong> A collision where both momentum and kinetic energy are conserved.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="equation.js"></script>
+</body>
+</html>

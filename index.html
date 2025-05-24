@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysiXlab - Physics Simulations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">PhysiXlab</h1>
+        <p class="subtitle">Interactive Physics Simulations</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-image" style="background-image: url('#');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Projectile Motion</h3>
+                    <p class="card-description">Simulate the motion of projectiles under gravity. Adjust initial velocity, angle, and height to see how they affect the trajectory.</p>
+                    <a href="ProjectileMotion/index.html" class="card-button">Launch Simulator</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('#');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Collision Simulator</h3>
+                    <p class="card-description">Explore elastic and inelastic collisions between objects. Adjust mass, velocity, and elasticity to see how they affect the outcome.</p>
+                    <a href="Collision/index.html" class="card-button">Launch Simulator</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('SHM/shm.png');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Simple Harmonic Motion</h3>
+                    <p class="card-description">Visualize the oscillatory motion of a mass-spring system. Adjust spring constant, mass, and initial displacement to see their effects.</p>
+                    <a href="#SHM/index.html" class="card-button">Launch Simulator</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('Pendulum/pendulum.png');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Pendulum Motion</h3>
+                    <p class="card-description">Study the motion of a simple pendulum. Change length, mass, and initial angle to observe different oscillation patterns.</p>
+                    <a href="#Pendulum/index.html" class="card-button">Launch Simulator</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('WaveInterference/wave.png');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Wave Interference</h3>
+                    <p class="card-description">Explore wave superposition and interference patterns. Adjust wavelength, amplitude, and phase to create different patterns.</p>
+                    <a href="#WaveInterference/index.html" class="card-button">Launch Simulator</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('Optics/optics.png');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Light Refraction</h3>
+                    <p class="card-description">Simulate light refraction through different media. Change incident angle and refractive indices to observe Snell's law in action.</p>
+                    <a href="#Optics/index.html" class="card-button">Launch Simulator</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image" style="background-image: url('CircularMotion/circular.png');"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Circular Motion</h3>
+                    <p class="card-description">Study uniform circular motion and centripetal force. Adjust radius, velocity, and mass to see their effects on the motion.</p>
+                    <a href="#CircularMotion/index.html" class="card-button">Launch Simulator</a>
+                </div>
+            </div>
+
+            <div class="card card-empty">
+                <div class="plus-icon">+</div>
+                <p>More simulations coming soon...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 PhysiXlab - Interactive Physics Simulations</p>
+        <p style="margin-top: 0.5rem;">Educational tools for understanding physics concepts</p>
+    </footer>
+
+    <script src="equation.js"></script>
+</body>
+</html>

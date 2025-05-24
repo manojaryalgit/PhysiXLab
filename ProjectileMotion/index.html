@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4">
+    <div class="container">
+        <a href="../index.html" class="inline-block mb-4 bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition-all duration-200 transform hover:scale-105 active:scale-95">← Back</a>
+        <h1>Projectile Motion Simulator</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="initialVelocity">Initial Velocity (m/s):</label>
+                <input type="number" id="initialVelocity" value="50" min="1" placeholder="Enter initial velocity" class="text-right">
+            </div>
+            <div class="input-group">
+                <label for="launchAngle">Launch Angle (degrees):</label>
+                <input type="number" id="launchAngle" value="45" min="0" max="90" placeholder="Enter launch angle" class="text-right">
+            </div>
+            <div class="input-group">
+                <label for="gravity">Gravity (m/s²):</label>
+                <input type="number" id="gravity" value="9.8" min="0" placeholder="Enter gravity" class="text-right">
+            </div>
+            <div class="input-group">
+                <label for="airResistance">Air Resistance Coefficient (optional):</label>
+                <input type="number" id="airResistance" value="0" placeholder="Enter air resistance (optional)" class="text-right">
+            </div>
+            <div class="input-group">
+                <label for="targetDistance">Target Distance (m):</label>
+                <input type="number" id="targetDistance" value="100" min="0" max="500" placeholder="Enter target distance" class="text-right">
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+            <button id="set-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full max-w-[300px]">Set Values</button>
+            <button id="run-button" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full max-w-[300px]" disabled>Run Simulation</button>
+        </div>
+
+        <div id="simulation-container" class="mt-8 p-4 rounded-lg bg-gray-800">
+            <canvas id="simulation-canvas"></canvas>
+        </div>
+        <button id="reset-button" class="mt-4 bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Reset</button>
+
+        <div id="info-box">
+            <h2>How it Works</h2>
+            <ul>
+                <li>Enter the initial velocity, launch angle, and gravity.  Optionally, you can enter an air resistance coefficient.</li>
+                <li>Click "Set Values" to confirm your inputs.</li>
+                <li>The simulation will display the trajectory of the projectile.</li>
+                <li>Adjust the parameters to see how they affect the range, maximum height, and time of flight.</li>
+            </ul>
+            <h2>Physics Concepts</h2>
+            <ul>
+                <li><strong>Projectile Motion:</strong> The motion of an object thrown or projected into the air, subject to gravity.</li>
+                <li><strong>Initial Velocity:</strong> The velocity at which the projectile is launched.</li>
+                <li><strong>Launch Angle:</strong> The angle at which the projectile is launched, relative to the horizontal.</li>
+                <li><strong>Gravity:</strong> The force that pulls the projectile downwards.</li>
+                <li><strong>Air Resistance:</strong>  A force that opposes the motion of the projectile through the air.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="equation.js"></script>
+</body>
+</html>
