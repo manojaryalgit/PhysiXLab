@@ -20,7 +20,7 @@ PhysiXLab is a collection of interactive physics simulations designed to help st
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/PhysiXLab.git
+   git clone https://github.com/manojaryalgit/PhysiXLab.git
    ```
 
 2. Open the project in your browser:
