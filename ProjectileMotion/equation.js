@@ -216,7 +216,7 @@ function runSimulation() {
         
         // Show hit message with animation
         scoreElement.innerHTML = `
-            <div class="animate-bounce bg-purple-600 text-white font-bold py-4 px-6 rounded-lg shadow-lg text-2xl">
+            <div class="animate-bounce bg-cyan-600 text-white font-bold py-4 px-6 rounded-lg shadow-lg text-2xl">
                 TARGET HIT!
             </div>
         `;
@@ -264,7 +264,7 @@ function drawTarget() {
     ctx.fill();
     
     // Add target label
-    ctx.fillStyle = '#065F46';
+    ctx.fillStyle = '#00bcc4';
     ctx.font = `${Math.max(10, 14 * scale)}px "Press Start 2P"`;
     ctx.textAlign = 'center';
     ctx.fillText("Target", targetX, groundY + 15 * scale);
@@ -273,7 +273,7 @@ function drawTarget() {
 function drawTrajectory() {
     if (trajectory.length < 2) return;
     
-    ctx.strokeStyle = '#A855F7'; // Purple
+    ctx.strokeStyle = '#00bcc4';
     ctx.lineWidth = 2 * scale;
     ctx.beginPath();
     ctx.moveTo(trajectory[0].x, trajectory[0].y);
@@ -363,7 +363,7 @@ function resetSimulation() {
     
     // Reset UI elements
     runButton.disabled = true;
-    runButton.classList.remove('bg-purple-500', 'hover:bg-purple-700');
+    runButton.classList.remove('bg-cyan-500', 'hover:bg-cyan-700');
     runButton.classList.add('bg-gray-500', 'cursor-not-allowed');
     
     // Reset the values set flag to require re-setting values
@@ -412,7 +412,7 @@ function setValues() {
     valuesSet = true;
     runButton.disabled = false;
     runButton.classList.remove('bg-gray-500', 'cursor-not-allowed');
-    runButton.classList.add('bg-purple-500', 'hover:bg-purple-700');
+    runButton.classList.add('bg-cyan-500', 'hover:bg-cyan-700');
     
     // Initialize and draw initial state
     initializeSimulation();
@@ -545,12 +545,12 @@ function drawStats() {
     // Draw background box with border
     ctx.fillStyle = 'rgba(19, 26, 40, 0.98)'; // Dark navy background
     ctx.fillRect(boxX, boxY, boxWidth, boxHeight);
-    ctx.strokeStyle = '#8B5CF6'; // Purple border
+    ctx.strokeStyle = '#00bcc4'; 
     ctx.lineWidth = 2 * scale;
     ctx.strokeRect(boxX, boxY, boxWidth, boxHeight);
     
     // Draw title
-    ctx.fillStyle = '#A855F7'; // Purple
+    ctx.fillStyle = '#00bcc4'; 
     ctx.font = `bold ${Math.max(16, 20 * scale)}px "Press Start 2P"`;
     ctx.textAlign = 'center';
     ctx.fillText('STATISTICS', boxX + boxWidth / 2, boxY + lineHeight);

@@ -42,7 +42,7 @@ function initializeSimulation() {
 
     // Set canvas dimensions
     canvas.width = Math.min(800, container.clientWidth - 40); // Maximum width of 800px with some padding
-    canvas.height = 400; // Fixed height
+    canvas.height = 200; // Fixed height
 
     // Calculate block widths proportional to their masses, with a minimum width
     const minWidth = 20;
